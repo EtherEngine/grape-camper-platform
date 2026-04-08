@@ -4,6 +4,31 @@ Fullstack-Plattform für die Vermietung und den Tausch von Campervans, Wohnmobil
 PHP-REST-API (ohne Framework) + React-SPA mit automatisiertem Mietvertragssystem.
 
 ---
+<img width="1900" height="899" alt="grape_pic1" src="https://github.com/user-attachments/assets/16cbb025-e56f-4b21-ba3c-ebe00b31e13a" />
+<img width="1896" height="923" alt="grape_pic2" src="https://github.com/user-attachments/assets/9d59faa4-a444-47bf-b409-110c599f6db2" />
+<img width="1899" height="922" alt="grape_pic3" src="https://github.com/user-attachments/assets/88fc7ec4-9649-43a4-a97a-42bdc789c16d" />
+<img width="1902" height="912" alt="grape_pic4" src="https://github.com/user-attachments/assets/511a5af3-ccbd-4cf2-9585-cf652c4026be" />
+<img width="1906" height="915" alt="grape_pic5" src="https://github.com/user-attachments/assets/c6ea5b81-4cf1-46c0-8ca3-e57cbd04ec84" />
+<img width="1908" height="860" alt="grape_pic6" src="https://github.com/user-attachments/assets/3f98a287-dae4-4190-b3ad-0e204f58a015" />
+<img width="1916" height="918" alt="grape_pic7" src="https://github.com/user-attachments/assets/a9d84635-ce12-4980-a496-7df082e0d2dd" />
+
+<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <a href="https://github.com/user-attachments/assets/16cbb025-e56f-4b21-ba3c-ebe00b31e13a" target="_blank">
+    <img src="https://github.com/user-attachments/assets/16cbb025-e56f-4b21-ba3c-ebe00b31e13a" width="300" />
+  </a>
+  <a href="https://github.com/user-attachments/assets/9d59faa4-a444-47bf-b409-110c599f6db2" target="_blank">
+    <img src="https://github.com/user-attachments/assets/9d59faa4-a444-47bf-b409-110c599f6db2" width="300" />
+  </a>
+</div>
+
+<div style="display: flex; gap: 10px; margin-bottom: 10px;">
+  <a href="https://github.com/user-attachments/assets/88fc7ec4-9649-43a4-a97a-42adc789c16d" target="_blank">
+    <img src="https://github.com/user-attachments/assets/88fc7ec4-9649-43a4-a97a-42adc789c16d" width="300" />
+  </a>
+  <a href="https://github.com/user-attachments/assets/511a5af3-ccbd-4cf2-9585-cf652c4026be" target="_blank">
+    <img src="https://github.com/user-attachments/assets/511a5af3-ccbd-4cf2-9585-cf652c4026be" width="300" />
+  </a>
+</div>
 
 ## Features
 
