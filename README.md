@@ -113,7 +113,7 @@ PHP-REST-API + React-SPA mit automatisiertem Mietvertragssystem.
 
 ```bash
 cd C:\xampp\htdocs
-git clone <repo-url> GRAPE
+git clone https://github.com/EtherEngine/grape-camper-platform.git
 ```
 
 ### 2. Datenbank einrichten
