@@ -44,7 +44,7 @@ PHP-REST-API (ohne Framework) + React-SPA mit automatisiertem Mietvertragssystem
 
 | Schicht       | Technologie                                      |
 | ------------- | ------------------------------------------------ |
-| **Backend**   | PHP 8.1+, mysqli, kein Framework, kein Composer  |
+| **Backend**   | PHP 8.1+, mysqli,                                |
 | **Frontend**  | React 18, Vite 5, React Router 6, Zustand, Axios |
 | **Datenbank** | MySQL 8 / MariaDB 10.6+, utf8mb4                 |
 | **Server**    | XAMPP (Apache + MySQL)                           |
