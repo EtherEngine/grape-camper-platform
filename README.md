@@ -30,7 +30,6 @@ PHP-REST-API (ohne Framework) + React-SPA mit automatisiertem Mietvertragssystem
     <img src="https://github.com/user-attachments/assets/3f98a287-dae4-4190-b3ad-0e204f58a015" width="300" />
   </a>
 </div>
----
 
 ## Features
 
