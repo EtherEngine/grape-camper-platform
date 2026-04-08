@@ -1,7 +1,7 @@
 # GRAPE – Camper-Vermietung & Tauschplattform
 
 Fullstack-Plattform für die Vermietung und den Tausch von Campervans, Wohnmobilen und Wohnwagen.  
-PHP-REST-API (ohne Framework) + React-SPA mit automatisiertem Mietvertragssystem.
+PHP-REST-API + React-SPA mit automatisiertem Mietvertragssystem.
 
 ---
 <div style="display: flex; gap: 10px; margin-bottom: 10px;">
