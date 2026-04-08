@@ -1,0 +1,310 @@
+/* ═══════════════════════════════════════════════════════════
+   OwnerSwapReviewPage
+   ═══════════════════════════════════════════════════════════ */
+
+.osr {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-12);
+}
+
+.osr__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+/* ── Tabs ───────────────────────────────────────────────── */
+.osr__tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+}
+
+/* ── Toast ──────────────────────────────────────────────── */
+.osr__toast {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  animation: osrFadeIn 0.25s ease-out;
+}
+
+.osr__toast--success {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-success);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+@keyframes osrFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Layout: list + detail panel ────────────────────────── */
+.osr__layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* ── Offer list ─────────────────────────────────────────── */
+.osr__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.osr__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.osr__card:hover {
+  border-color: var(--color-border-hover);
+}
+
+.osr__card--active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.osr__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.osr__card-type {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.osr__card-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.osr__card-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.osr__card-renter { font-weight: 500; }
+
+.osr__card-vehicle {
+  color: var(--color-text-muted);
+}
+
+.osr__card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.osr__card-value {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: var(--text-base);
+}
+
+.osr__card-date {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.osr__card-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+/* ── Status badge ───────────────────────────────────────── */
+.osr__status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.osr__status--pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.osr__status--under_review {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.osr__status--accepted {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.osr__status--rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.osr__status--cancelled {
+  background: rgba(107, 114, 128, 0.15);
+  color: #9ca3af;
+}
+
+/* ── Modal description ──────────────────────────────────── */
+.osr__modal-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+/* ── Detail panel ───────────────────────────────────────── */
+.osr__detail {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  position: sticky;
+  top: calc(var(--navbar-height, 64px) + var(--space-4));
+  max-height: calc(100vh - var(--navbar-height, 64px) - var(--space-8));
+  overflow-y: auto;
+  animation: osrFadeIn 0.2s ease-out;
+}
+
+.osr__detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.osr__detail-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.osr__detail-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  cursor: pointer;
+  padding: var(--space-1);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.osr__detail-close:hover {
+  color: var(--color-text);
+}
+
+.osr__detail-section {
+  margin-top: var(--space-4);
+}
+
+.osr__detail-section h4 {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-1);
+}
+
+.osr__detail-section p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.osr__detail-value {
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  font-size: var(--text-lg) !important;
+}
+
+.osr__detail-email {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.osr__detail-sub {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.osr__detail-comment {
+  font-style: italic;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+}
+
+.osr__detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+/* ── Detail images ──────────────────────────────────────── */
+.osr__detail-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.osr__detail-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+/* ── Detail actions ─────────────────────────────────────── */
+.osr__detail-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .osr__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .osr__detail {
+    position: static;
+    max-height: none;
+  }
+}

@@ -1,0 +1,1180 @@
+.ov {
+  padding: var(--space-8) var(--space-4);
+}
+
+.ov__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.ov__title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.ov__add-btn {
+  padding: var(--space-2) var(--space-6);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.ov__add-btn:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+.ov__tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+}
+
+.ov__tab {
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.ov__tab:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-secondary);
+}
+
+.ov__tab--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ── Verification banner ─────────────────────────────────── */
+.ov__verify-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.ov__verify-banner strong {
+  display: block;
+  color: var(--color-warning);
+  margin-bottom: var(--space-1);
+  font-size: var(--text-base);
+}
+
+.ov__verify-banner p {
+  margin: 0;
+}
+
+.ov__verify-icon {
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Error / Empty ───────────────────────────────────────── */
+.ov__error {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--color-danger);
+}
+
+.ov__error p {
+  margin-bottom: var(--space-4);
+}
+
+.ov__retry {
+  padding: var(--space-2) var(--space-6);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ov__empty {
+  text-align: center;
+  padding: var(--space-16);
+  color: var(--color-text-muted);
+}
+
+.ov__empty p {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+/* ── Vehicle list ────────────────────────────────────────── */
+.ov__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.ov__card {
+  display: flex;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.ov__card:hover {
+  border-color: var(--color-border-hover);
+}
+
+.ov__card-image-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  background: var(--color-bg-secondary);
+  overflow: hidden;
+}
+
+.ov__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ov__card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.ov__card-body {
+  flex: 1;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ov__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ov__card-price {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ov__card-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.ov__card-location {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.ov__card-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* ── Status badges ───────────────────────────────────────── */
+.ov-badge {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ov-badge--draft {
+  background: rgba(107, 114, 128, 0.15);
+  color: var(--color-text-muted);
+}
+
+.ov-badge--active {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--color-success);
+}
+
+.ov-badge--inactive {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--color-warning);
+}
+
+.ov-badge--archived {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+/* ── Action buttons ──────────────────────────────────────── */
+.ov__action-btn {
+  padding: var(--space-1) var(--space-3);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ov__action-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.ov__action-btn--success {
+  border-color: rgba(34, 197, 94, 0.4);
+  color: var(--color-success);
+}
+
+.ov__action-btn--success:hover:not(:disabled) {
+  border-color: var(--color-success);
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-success);
+}
+
+.ov__action-btn--warn {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: var(--color-warning);
+}
+
+.ov__action-btn--warn:hover:not(:disabled) {
+  border-color: var(--color-warning);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+.ov__action-btn--danger {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: var(--color-danger);
+}
+
+.ov__action-btn--danger:hover:not(:disabled) {
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-danger);
+}
+
+.ov__action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ov__card {
+    flex-direction: column;
+  }
+
+  .ov__card-image-wrap {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   Vehicle Form — Card-based redesign
+   ══════════════════════════════════════════════════════════ */
+.vform {
+  max-width: 860px;
+  padding: var(--space-6) var(--space-4) 120px; /* extra bottom for sticky bar */
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.vform__header {
+  margin-bottom: var(--space-6);
+}
+
+.vform__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+  transition: color var(--transition-fast);
+}
+
+.vform__back:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.vform__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.vform__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Section navigation ──────────────────────────────────── */
+.vform__nav {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 10;
+  background: var(--color-bg);
+  padding-top: var(--space-2);
+  -webkit-overflow-scrolling: touch;
+}
+
+.vform__nav-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.vform__nav-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.vform__nav-btn--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(108, 52, 97, 0.3);
+}
+
+.vform__nav-icon {
+  font-size: var(--text-sm);
+}
+
+.vform__nav-label {
+  font-size: var(--text-xs);
+}
+
+/* ── Alerts ──────────────────────────────────────────────── */
+.vform__alert {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.vform__alert--error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
+}
+
+.vform__alert--success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: var(--color-success);
+}
+
+/* ── Card sections ───────────────────────────────────────── */
+.vform__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  scroll-margin-top: calc(var(--navbar-height) + 60px);
+  transition: box-shadow var(--transition-fast);
+}
+
+.vform__card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.vform__card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: linear-gradient(135deg, rgba(108, 52, 97, 0.04) 0%, rgba(108, 52, 97, 0.01) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.vform__card-icon {
+  font-size: var(--text-2xl);
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.vform__card-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.vform__card-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.vform__card-body {
+  padding: var(--space-5);
+}
+
+/* ── Grid layouts ────────────────────────────────────────── */
+.vform__grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.vform__grid--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.vform__grid--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ── Field ───────────────────────────────────────────────── */
+.vform__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.vform__field:last-child {
+  margin-bottom: 0;
+}
+
+.vform__field--error .vform__input,
+.vform__field--error .vform__select,
+.vform__field--error .vform__textarea {
+  border-color: var(--color-danger);
+}
+
+.vform__field--error .vform__input:focus,
+.vform__field--error .vform__select:focus,
+.vform__field--error .vform__textarea:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.vform__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.vform__required {
+  color: var(--color-danger);
+  margin-left: 2px;
+}
+
+.vform__hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.vform__input,
+.vform__select,
+.vform__textarea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.vform__input:focus,
+.vform__select:focus,
+.vform__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.vform__input::placeholder,
+.vform__textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.vform__select option {
+  background: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.vform__textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.vform__field-error {
+  font-size: var(--text-xs);
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+/* ── Input group (€ prefix) ─────────────────────────────── */
+.vform__input-group {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.vform__input-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+.vform__input--prefixed {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* ── Toggle switches ─────────────────────────────────────── */
+.vform__toggles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-2);
+}
+
+.vform__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.vform__toggle:last-child {
+  border-bottom: none;
+}
+
+.vform__toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vform__toggle-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.vform__toggle-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.vform__switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--color-border);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.vform__switch--on {
+  background: var(--color-primary);
+}
+
+.vform__switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition-fast);
+}
+
+.vform__switch--on .vform__switch-thumb {
+  transform: translateX(20px);
+}
+
+/* ── Price sub-headings ──────────────────────────────────── */
+.vform__price-heading {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-2);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.vform__price-heading:first-child {
+  margin-top: 0;
+}
+
+/* ── Sticky save bar ─────────────────────────────────────── */
+.vform__save-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  padding: var(--space-3) var(--space-4);
+}
+
+.vform__save-bar-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.vform__cancel-btn {
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vform__cancel-btn:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text);
+}
+
+.vform__submit {
+  padding: var(--space-2) var(--space-8);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(108, 52, 97, 0.25);
+}
+
+.vform__submit:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(108, 52, 97, 0.35);
+}
+
+.vform__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Legacy compat (still used by sub-comps) ─────────────── */
+.vform__error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.vform__success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: var(--color-success);
+  font-size: var(--text-sm);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .vform__grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vform__card-body {
+    padding: var(--space-4);
+  }
+
+  .vform__card-header {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+@media (max-width: 540px) {
+  .vform {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .vform__grid--2,
+  .vform__grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .vform__nav-label {
+    display: none;
+  }
+
+  .vform__nav-btn {
+    padding: var(--space-2);
+  }
+
+  .vform__nav-icon {
+    font-size: var(--text-base);
+  }
+
+  .vform__save-bar-inner {
+    flex-direction: column;
+  }
+
+  .vform__cancel-btn,
+  .vform__submit {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── Images form ─────────────────────────────────────────── */
+.vimg__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.vimg__item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.vimg__item--cover {
+  border-color: var(--color-primary);
+}
+
+.vimg__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vimg__item-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+}
+
+.vimg__item-btn {
+  flex: 1;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.vimg__item-btn:hover {
+  color: var(--color-primary);
+}
+
+.vimg__item-btn--danger:hover {
+  color: var(--color-danger);
+}
+
+.vimg__cover-tag {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 2px 6px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.vimg__upload-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  background: var(--color-bg-input);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.vimg__upload-zone:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text-secondary);
+}
+
+/* ── Features form ───────────────────────────────────────── */
+.vfeat__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.vfeat__row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.vfeat__row input {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.vfeat__row input:focus {
+  border-color: var(--color-primary);
+}
+
+.vfeat__row input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.vfeat__remove-btn {
+  padding: var(--space-1) var(--space-2);
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--color-danger);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.vfeat__remove-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.vfeat__add-btn {
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vfeat__add-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .vform__row,
+  .vform__row--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   VehicleImagesForm – Preview grid, progress bar, drop zone
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Preview grid ────────────────────────────────────────── */
+.vimg__preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.vimg__preview-card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  animation: vimgFadeIn 0.2s ease-out;
+}
+
+.vimg__preview-card--error {
+  border-color: rgba(239, 68, 68, 0.5);
+  opacity: 0.7;
+}
+
+@keyframes vimgFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.vimg__preview-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.vimg__preview-info {
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vimg__preview-name {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vimg__preview-size {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.vimg__preview-error {
+  font-size: var(--text-xs);
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+.vimg__preview-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+  border-radius: var(--radius-full);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.vimg__preview-remove:hover {
+  background: var(--color-danger);
+}
+
+/* ── Progress bar ────────────────────────────────────────── */
+.vimg__progress {
+  position: relative;
+  height: 22px;
+  background: var(--color-bg-input);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+
+.vimg__progress-bar {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.vimg__progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ── Preview actions ─────────────────────────────────────── */
+.vimg__preview-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.vimg__upload-btn {
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.vimg__upload-btn:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.vimg__upload-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vimg__clear-btn {
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vimg__clear-btn:hover:not(:disabled) {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.vimg__clear-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Drop zone (enhanced) ────────────────────────────────── */
+.vimg__upload-zone {
+  width: 100%;
+}
+
+.vimg__upload-zone--active {
+  border-color: var(--color-primary) !important;
+  background: var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+}
+
+.vimg__zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-4) 0;
+}
+
+.vimg__zone-icon {
+  font-size: 1.6rem;
+}
+
+.vimg__zone-hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,502 @@
+/* ═══════════════════════════════════════════════════════════
+   BookingWizard – shared styles for Wizard, Form, Summary, PriceBox
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Wizard layout ──────────────────────────────────────── */
+.bwiz {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.bwiz__header {
+  margin-bottom: var(--space-6);
+}
+
+.bwiz__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Progress bar ───────────────────────────────────────── */
+.bwiz__progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.bwiz__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex: 1;
+  justify-content: center;
+}
+
+.bwiz__step--active {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(108, 52, 97, 0.3);
+}
+
+.bwiz__step--done {
+  background: rgba(108, 52, 97, 0.08);
+  color: var(--primary);
+}
+
+.bwiz__step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.bwiz__step--active .bwiz__step-num {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.bwiz__step--done .bwiz__step-num {
+  background: var(--primary);
+  color: #fff;
+}
+
+.bwiz__step-label {
+  font-weight: 500;
+}
+
+/* ── Body: main + sidebar ───────────────────────────────── */
+.bwiz__body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.bwiz__main {
+  min-width: 0;
+}
+
+.bwiz__step-content {
+  margin-bottom: var(--space-4);
+}
+
+/* ── Navigation ─────────────────────────────────────────── */
+.bwiz__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-color);
+}
+
+.bwiz__nav-spacer {
+  flex: 1;
+}
+
+.bwiz__btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bwiz__btn:active {
+  transform: scale(0.97);
+}
+
+.bwiz__btn--back {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.bwiz__btn--back:hover {
+  background: var(--bg-secondary);
+}
+
+.bwiz__btn--next,
+.bwiz__btn--submit {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(108, 52, 97, 0.25);
+}
+
+.bwiz__btn--next:hover,
+.bwiz__btn--submit:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(108, 52, 97, 0.35);
+}
+
+.bwiz__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── BookingForm ────────────────────────────────────────── */
+.bform {
+  margin-bottom: var(--space-4);
+}
+
+.bform__step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.bform__step-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-6);
+}
+
+.bform__field {
+  margin-bottom: var(--space-4);
+}
+
+.bform__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.bform__input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--color-bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bform__input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 52, 97, 0.1);
+}
+
+.bform__input--error {
+  border-color: var(--error);
+}
+
+.bform__textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.bform__select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.bform__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.bform__checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.bform__error {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: var(--space-1);
+}
+
+/* Review block (step 2) */
+.bform__review {
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.bform__review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bform__review-row:last-child {
+  border-bottom: none;
+}
+
+.bform__review-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.bform__review-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Payment method grid (step 4) */
+.bform__payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.bform__payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bform__payment-option:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.bform__payment-option--active {
+  border-color: var(--primary);
+  background: rgba(108, 52, 97, 0.04);
+  box-shadow: 0 0 0 3px rgba(108, 52, 97, 0.1);
+}
+
+.bform__payment-icon {
+  font-size: 1.6rem;
+}
+
+.bform__payment-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── BookingSummary ─────────────────────────────────────── */
+.bsummary__section {
+  margin-bottom: var(--space-4);
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.bsummary__heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid rgba(108, 52, 97, 0.15);
+}
+
+.bsummary__row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  font-size: 0.9rem;
+}
+
+.bsummary__row span:first-child {
+  color: var(--text-muted);
+}
+
+.bsummary__row span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.bsummary__text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.bsummary__text--muted {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.bsummary__hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  background: rgba(108, 52, 97, 0.06);
+  border-radius: var(--radius-md);
+  line-height: 1.5;
+}
+
+.bsummary__legal {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: var(--space-4);
+  line-height: 1.5;
+}
+
+/* ── BookingPriceBox ────────────────────────────────────── */
+.bprice {
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: sticky;
+  top: calc(var(--navbar-height, 64px) + var(--space-4));
+  box-shadow: var(--shadow-md);
+}
+
+.bprice__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid rgba(108, 52, 97, 0.15);
+}
+
+.bprice__loading,
+.bprice__empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: var(--space-4) 0;
+}
+
+.bprice__breakdown {
+  margin-bottom: var(--space-2);
+}
+
+.bprice__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+}
+
+.bprice__row--total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: var(--space-1);
+}
+
+.bprice__row--deposit {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: var(--space-1);
+}
+
+.bprice__divider {
+  border-top: 1px solid var(--border-color);
+  margin: var(--space-3) 0;
+}
+
+.bprice__nights {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-color);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .bwiz__body {
+    grid-template-columns: 1fr;
+  }
+
+  .bwiz__sidebar {
+    order: -1;
+  }
+
+  .bprice {
+    position: static;
+  }
+
+  .bform__payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bwiz__progress {
+    gap: 2px;
+  }
+
+  .bwiz__step-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .bwiz {
+    padding: var(--space-3);
+  }
+
+  .bwiz__title {
+    font-size: 1.25rem;
+  }
+
+  .bwiz__step {
+    padding: var(--space-1) 6px;
+    font-size: 0.75rem;
+  }
+
+  .bwiz__step-num {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+
+  .bsum__row {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .bprice__row {
+    font-size: var(--text-xs);
+  }
+}

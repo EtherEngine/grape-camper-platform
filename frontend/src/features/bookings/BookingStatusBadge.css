@@ -1,0 +1,54 @@
+.bstatus {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Sizes */
+.bstatus--sm { font-size: var(--text-xs); padding: 2px 8px; }
+.bstatus--md { font-size: var(--text-sm); padding: 3px 10px; }
+.bstatus--lg { font-size: var(--text-base); padding: 4px 14px; }
+
+/* Colors */
+.bstatus--draft {
+  background: rgba(107, 114, 128, 0.12);
+  color: #4b5563;
+}
+
+.bstatus--pending {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.bstatus--payment {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+
+.bstatus--contract {
+  background: rgba(108, 52, 97, 0.12);
+  color: #5A2B51;
+}
+
+.bstatus--confirmed {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+
+.bstatus--rejected {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.bstatus--cancelled {
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+}
+
+.bstatus--completed {
+  background: rgba(108, 52, 97, 0.12);
+  color: #5A2B51;
+}

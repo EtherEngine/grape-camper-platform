@@ -1,0 +1,17 @@
+# Environment
+backend/.env
+
+# Logs
+backend/storage/logs/*.log
+
+# Dependencies
+frontend/node_modules/
+
+# Build
+frontend/dist/
+
+# Local History (VS Code Extension)
+.history/
+
+# Debug endpoint
+backend/public/debug.php

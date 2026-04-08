@@ -1,0 +1,203 @@
+/* ── Contract Page ──────────────────────────────────────── */
+.rc { padding: var(--space-6) 0; max-width: 900px; }
+
+.rc__header { margin-bottom: var(--space-6); }
+.rc__back {
+  background: none; border: none; color: var(--color-primary);
+  cursor: pointer; font-size: var(--text-sm); padding: 0;
+  margin-bottom: var(--space-2);
+}
+.rc__back:hover { text-decoration: underline; }
+.rc__header-main { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.rc__title { font-size: var(--text-2xl); font-weight: 700; margin: 0; }
+.rc__subtitle { color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-1); }
+
+/* Status badges */
+.rc__status {
+  display: inline-flex; align-items: center; font-weight: 600;
+  font-size: var(--text-sm); padding: 3px 12px;
+  border-radius: var(--radius-full); white-space: nowrap;
+}
+.rc__status--pending-owner { background: rgba(245,158,11,.12); color: #b45309; }
+.rc__status--pending-renter { background: rgba(59,130,246,.12); color: #2563eb; }
+.rc__status--pending-signatures { background: rgba(108,52,97,.12); color: #5A2B51; }
+.rc__status--signed { background: rgba(34,197,94,.12); color: #16a34a; }
+.rc__status--cancelled { background: rgba(239,68,68,.08); color: #dc2626; }
+
+/* Sections */
+.rc__section {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+.rc__section--highlight {
+  border-color: var(--color-primary);
+  background: rgba(108,52,97,.03);
+}
+.rc__section--signatures { background: var(--color-surface); }
+.rc__section-title {
+  font-size: var(--text-lg); font-weight: 600;
+  margin: 0 0 var(--space-3) 0;
+}
+
+/* Form fields */
+.rc__field-row { margin-bottom: var(--space-3); }
+.rc__field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.rc__label {
+  display: block; font-size: var(--text-sm); font-weight: 500;
+  color: var(--color-text-muted); margin-bottom: var(--space-1);
+}
+.rc__input, .rc__select, .rc__textarea {
+  width: 100%; padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  font-size: var(--text-sm); background: var(--color-bg);
+  color: var(--color-text); font-family: inherit;
+  transition: border-color .15s;
+}
+.rc__input:focus, .rc__select:focus, .rc__textarea:focus {
+  outline: none; border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(108,52,97,.1);
+}
+.rc__textarea { resize: vertical; min-height: 60px; }
+.rc__textarea--large { min-height: 300px; font-family: 'Courier New', monospace; font-size: var(--text-xs); line-height: 1.6; }
+
+/* Info rows (read-only) */
+.rc__info-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+.rc__info-row:last-child { border-bottom: none; }
+.rc__info-label { color: var(--color-text-muted); font-weight: 500; }
+
+/* Contract preview */
+.rc__contract-preview {
+  white-space: pre-wrap; word-wrap: break-word;
+  font-family: 'Courier New', monospace; font-size: var(--text-xs);
+  line-height: 1.6; background: var(--color-bg);
+  border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  padding: var(--space-4); max-height: 500px; overflow-y: auto;
+}
+
+/* Buttons */
+.rc__actions {
+  display: flex; gap: var(--space-3); align-items: center;
+  justify-content: flex-end; flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+.rc__btn {
+  padding: var(--space-2) var(--space-5); border-radius: var(--radius-md);
+  font-size: var(--text-sm); font-weight: 600; cursor: pointer;
+  border: none; transition: background .15s, transform .1s;
+}
+.rc__btn:hover { transform: translateY(-1px); }
+.rc__btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.rc__btn--primary { background: var(--color-primary); color: #fff; }
+.rc__btn--primary:hover:not(:disabled) { background: var(--color-primary-hover); }
+.rc__btn--secondary { background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-border); }
+.rc__btn--secondary:hover:not(:disabled) { background: var(--color-bg); }
+.rc__btn--success { background: #16a34a; color: #fff; }
+.rc__btn--success:hover:not(:disabled) { background: #15803d; }
+.rc__btn--large { padding: var(--space-3) var(--space-8); font-size: var(--text-base); }
+
+/* Info boxes */
+.rc__info-box {
+  background: rgba(59,130,246,.06); border: 1px solid rgba(59,130,246,.2);
+  border-radius: var(--radius-lg); padding: var(--space-5);
+  text-align: center; font-size: var(--text-sm); color: var(--color-text);
+}
+.rc__info-box--danger {
+  background: rgba(239,68,68,.06); border-color: rgba(239,68,68,.2);
+}
+.rc__hint { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-3); }
+.rc__text { font-size: var(--text-sm); line-height: 1.6; }
+
+/* Signature cards */
+.rc__sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.rc__sig-card {
+  border: 2px dashed var(--color-border); border-radius: var(--radius-lg);
+  padding: var(--space-4); text-align: center;
+  display: flex; flex-direction: column; gap: var(--space-2);
+}
+.rc__sig-card--signed { border-color: #16a34a; border-style: solid; background: rgba(34,197,94,.04); }
+.rc__sig-role { font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; color: var(--color-text-muted); letter-spacing: .05em; }
+.rc__sig-name { font-size: var(--text-base); font-weight: 600; }
+.rc__sig-status { font-size: var(--text-xs); }
+.rc__sig-status--done { color: #16a34a; }
+.rc__sig-status--pending { color: #b45309; }
+.rc__sign-notice {
+  font-size: var(--text-xs); color: var(--color-text-muted);
+  text-align: right; flex: 1;
+}
+
+/* Error */
+.rc__error { text-align: center; padding: var(--space-10) 0; }
+.rc__error-msg {
+  background: rgba(239,68,68,.08); color: #dc2626;
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-md);
+  font-size: var(--text-sm); margin-bottom: var(--space-4);
+}
+
+/* Success / Journey banners */
+.rc__success-banner, .rc__journey-banner {
+  text-align: center; padding: var(--space-8) var(--space-4);
+  border-radius: var(--radius-lg); margin-bottom: var(--space-4);
+}
+.rc__success-banner {
+  background: linear-gradient(135deg, rgba(34,197,94,.08), rgba(108,52,97,.08));
+  border: 1px solid rgba(34,197,94,.2);
+}
+.rc__success-icon, .rc__journey-icon { font-size: 3rem; display: block; margin-bottom: var(--space-2); }
+.rc__success-title, .rc__journey-title { font-size: var(--text-xl); font-weight: 700; margin: 0 0 var(--space-2); }
+.rc__success-text, .rc__journey-text { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0; }
+
+.rc__pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: #fff;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.rc__pdf-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.rc__journey-banner {
+  background: linear-gradient(135deg, rgba(108,52,97,.08), rgba(59,130,246,.08));
+  border: 1px solid rgba(108,52,97,.2);
+}
+
+/* Location cards */
+.rc__location-card {
+  background: var(--color-bg); border-radius: var(--radius-md);
+  padding: var(--space-3); margin-top: var(--space-2);
+}
+.rc__location-address { font-weight: 600; font-size: var(--text-sm); margin: 0 0 var(--space-1); }
+.rc__location-date { font-size: var(--text-sm); color: var(--color-primary); font-weight: 600; margin: 0 0 var(--space-1); }
+.rc__location-notes { font-size: var(--text-xs); color: var(--color-text-muted); margin: 0 0 var(--space-3); }
+
+/* Map */
+.rc__map-wrap { margin-top: var(--space-3); border-radius: var(--radius-md); overflow: hidden; }
+.rc__map { width: 100%; height: 250px; border: none; display: block; }
+.rc__map-link {
+  display: block; text-align: center; font-size: var(--text-xs);
+  padding: var(--space-2); color: var(--color-primary);
+  background: var(--color-surface); border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .rc__field-grid { grid-template-columns: 1fr; }
+  .rc__sig-grid { grid-template-columns: 1fr; }
+  .rc__actions { justify-content: stretch; flex-direction: column; }
+  .rc__btn { width: 100%; text-align: center; }
+}
