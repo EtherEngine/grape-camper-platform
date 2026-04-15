@@ -168,7 +168,6 @@ Alle Passwörter: **`Test1234!`**
 
 | Rolle | E-Mail            | Name               |
 | ----- | ----------------- | ------------------ |
-| Admin | admin@grape.local | System Admin       |
 | Owner | owner@grape.local | Max Vermieter      |
 | Owner | sarah@grape.local | Sarah Bergmann     |
 | Owner | jonas@grape.local | Jonas Waldstein    |
